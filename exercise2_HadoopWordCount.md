@@ -15,6 +15,7 @@ Collection: `news.zip` (It's Learning) or if you are running docker you can down
 `curl -k -L -o news.zip   https://www.dropbox.com/s/gkhkx10n9ocxgvv/news.zip\?dl=1`
 You unzip it and copy it to HDFS. You should already remember how to do it from exercise 1.
 
+
 1. In this exercise you will count the words using `Hadoop MapReduce`. Download the template project "hadoop-word-count". 
 First you need to set up the project. Import the project (`pom.xml`) into an IDE such as Intellij IDEA or Eclipse. Use the template project and change the mapper and reducer code, search for //TODO
 
