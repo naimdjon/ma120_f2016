@@ -46,8 +46,9 @@ The base image can be obtained from docker hub.
 ### Method 3. VirtualBox
  Install VirtualBox if necessary. For Windows users it might be necessary. Docker on windows has been verified to work, but unstable. There is an pre-built image of the complete system for use in this course. Contact the instructor for an USB stick with the image.
 
-
+Make sure the HDFS daemons are started. If not, you can run `bash /opt/hadoop/latest/sbin/start-dfs.sh`. If ssh is not started, `/etc/init.d/ssh start`.
 Start the HDFS and explore the following commands (put `hadoop fs` in front):
+
 
  * `-ls`
  * `-mkdir`
