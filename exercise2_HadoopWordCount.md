@@ -27,14 +27,12 @@ Finally, you need to `copyFromLocal` the collection to the HDFS. Run the word co
 Run the job with the command:
 `hadoop jar hadoop-wordcount-1.0-SNAPSHOT.jar hadoop_wordcount.WordCounter /user/<your_username>/<your_collection>  /user/<your_username>/output`
 
-To share a folder between your docker host and the container, you can start the container using the `-v` option:
-`docker run -it -v  /<your_local_folder>/:/ma120 naimdjon/hadoop`. 
-
-The folder will appear as `/ma120` in your container.
-
 2. (Optional) When you see the results, you clearly see that there is a room for improvement. 
  - cleaning up the words
  - removing useless words (stopwords)
  - removing the numbers
 
-
+Note:  To share a folder between your docker host and the container, you can start the container using the `-v` option:
+ `docker run -it -v  /<your_local_folder>/:/ma120 naimdjon/hadoop`. 
+  
+   The folder will appear as `/ma120` in your container.
