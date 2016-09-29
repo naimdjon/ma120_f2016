@@ -1,13 +1,10 @@
 ## Exercise 3. More MapReduce.
 
 1. Write a Hadoop MapReduce program which outputs the dataset in all caps (capitalized). Now, our output is going to contains only keys.
-One way to solve it would be to simply use the key (and not the value). That means, in the reducer would output only the key. Hint: you can use `NullWritable` to output empty value.
-
+One way to solve it would be to simply use the key (and not the value). That means, the reducer would output only the key. Hint: you can use `NullWritable` to output empty value.
 The template project can be found in the same folder: `hadoop-uppercase.zip`.
-
 You are free to use any dataset; there is a file called `hamlet.txt` included in the exercise folder.
-
-NOTE: in this exercise you also have to change something in your driver code (`Uppercase.java`). Hadoop will complain about it when you try to run your job.
+NOTE: in this exercise you also have to change something in your driver code (`Uppercase.java`). Otherwise, Hadoop will complain about it when you try to run your job.
 
 2. We build on top what you did in 1. In your driver (client) code, set the number of reducers to 2 (Hint: you can use a method on a `Job` class to tell how many reduce tasks Hadoop should use). Note that the results should not include anything other than the original input text in all capital letters. Download the output and compare the results with the original text. Is there difference and why?
 
