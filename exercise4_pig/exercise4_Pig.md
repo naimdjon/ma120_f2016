@@ -67,6 +67,7 @@ Check the content:
 Filter first:
 
        B = FILTER DIV_A BY symbol=='AZZ';
+
 Then, group:
 
        C = GROUP B BY dividend; 
