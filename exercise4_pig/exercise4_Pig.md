@@ -4,7 +4,7 @@
 We are going to use the New York Stock Exchange (NYSE) dataset in this exercise. This dataset includes the daily open, close, high and low volume on the NYSE, as well as stock dividends. The data fields available include date, stock symbol, stock open and close prices, highs, lows, volume, and adjusted closing price. The dataset includes data from NYSE from 1970 to 2010. We are going to be doing a small-scale analysis and focus on daily prices and dividends of stocks for symbols starting with `A`&#185;. 
 
 #### Dataset preparation.
-In the text of the exercise it is assumed that you have the dataset files (`NYSE_dividends_A.csv`, `NYSE_daily_prices_A.csv`) in the (docker) volume mapped to `/ma120/exercise4_pig/exercise4_pig`. Change this path if you have different configuration accordingly.
+In the text of the exercise it is assumed that you have the dataset files (`NYSE_dividends_A.csv`, `NYSE_daily_prices_A.csv`) in the (docker) volume mapped to `/ma120/exercise4_pig`. Change this path if you have different configuration accordingly.
 
 #### Tasks.
 Pig is already installed in the docker image so you can run your experiments there. At the time of writing, the installed version is the latest, i.e. `0.16.0`.
