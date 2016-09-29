@@ -14,6 +14,7 @@ If you wish to experiment with it on your machine, you can install it following 
 1. Load subset for stocks:
 
        STOCK_A = LOAD '/ma120/exercise4_pig/NYSE_daily_prices_A.csv' using PigStorage(',');
+
 Check the `STOCK_A`:
 
        DESCRIBE STOCK_A;
