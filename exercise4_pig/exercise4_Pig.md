@@ -14,19 +14,18 @@ If you wish to experiment with it on your machine, you can install it following 
 1. Load subset for stocks:
 
        STOCK_A = LOAD '/ma120/exercise4_pig/NYSE_daily_prices_A.csv' using PigStorage(',');
-
 Check the `STOCK_A`:
-
+```
        DESCRIBE STOCK_A;
+```
 2. Check the schema. What did you get? Why does Pig tell us that the schema is unknown?
 3. Load it with a schema.
-
+```
        STOCK_A = LOAD '/ma120/exercise4_pig/NYSE_daily_prices_A.csv' using PigStorage(',') AS (exchange:chararray, symbol:chararray, date:chararray, open:float, high:float, low:float, close:float, volume:int, adj_close:float); 
+```
+Check the `STOCK_A`:       
 
-Check the `STOCK_A`:
-
-       DESCRIBE STOCK_A;
-       
+       DESCRIBE STOCK_A;`
 4. Create a subset of the data. 100 rows.
 
        B = LIMIT STOCK_A 100;
@@ -38,7 +37,6 @@ Check the `STOCK_A`:
 6. One of the key uses of Pig is data transformation. You can define a new relation based on the fields of an existing relation using the `FOREACH` command. Define a new relation `C`, which will contain only the symbol, date and close fields from relation `B`.
 
        C = FOREACH B GENERATE symbol, date, close;
-       
 Now, check the schema:
 
        DESCRIBE C;
@@ -67,7 +65,6 @@ Check the content:
 Filter first:
 
        B = FILTER DIV_A BY symbol=='AZZ';
-
 Then, group:
 
        C = GROUP B BY dividend; 
