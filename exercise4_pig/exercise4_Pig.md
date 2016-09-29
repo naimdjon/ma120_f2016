@@ -7,7 +7,7 @@ We are going to use the New York Stock Exchange (NYSE) dataset in this exercise.
 In the text of the exercise it is assumed that you have the dataset files (`NYSE_dividends_A.csv`, `NYSE_daily_prices_A.csv`) in the (docker) volume mapped to `/ma120/exercise4_pig`. Change this path if you have different configuration accordingly.
 
 #### Tasks.
-Pig is already installed in the docker image so you can run your experiments there. At the time of writing, the installed version is the latest, i.e. `0.16.0`.
+Pig is already installed in the docker image so you can run your experiments there. At the time of writing, the installed version is the latest, i.e. `0.16.0`. Start the pig with `pig -x local`.
 
 If you wish to experiment with it on your machine, you can install it following the steps described in the [Appendix A](#appendix-a) at the end of this document. 
 
