@@ -22,9 +22,11 @@ Check the `STOCK_A`:
 3. Load it with a schema.
 
        STOCK_A = LOAD '/ma120/exercise4_pig/NYSE_daily_prices_A.csv' using PigStorage(',') AS (exchange:chararray, symbol:chararray, date:chararray, open:float, high:float, low:float, close:float, volume:int, adj_close:float); 
-Check the `STOCK_A`:       
 
-       DESCRIBE STOCK_A;`
+Check the `STOCK_A`:
+
+       DESCRIBE STOCK_A;
+       
 4. Create a subset of the data. 100 rows.
 
        B = LIMIT STOCK_A 100;
@@ -36,6 +38,7 @@ Check the `STOCK_A`:
 6. One of the key uses of Pig is data transformation. You can define a new relation based on the fields of an existing relation using the `FOREACH` command. Define a new relation `C`, which will contain only the symbol, date and close fields from relation `B`.
 
        C = FOREACH B GENERATE symbol, date, close;
+       
 Now, check the schema:
 
        DESCRIBE C;
