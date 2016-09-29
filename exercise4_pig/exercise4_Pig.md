@@ -33,35 +33,45 @@ Check the `STOCK_A`:
        DESCRIBE B;
 ```
 * View the relation. Since `B` contains only 100 relations, we can simply dump its contents to standard out.
- 
+```
        DUMP B;
+```
 * One of the key uses of Pig is data transformation. You can define a new relation based on the fields of an existing relation using the `FOREACH` command. Define a new relation `C`, which will contain only the symbol, date and close fields from relation `B`.
-
+```
        C = FOREACH B GENERATE symbol, date, close;
+```
 Now, check the schema:
-
+```
        DESCRIBE C;
+```
 * Dump the content of `C` to see if the transformed relation has expected data.
-       
+```       
        DUMP C;
+```
 * Performing a join with dividents data. First we load dividents for `A`.
-
+```
        DIV_A = LOAD '/ma120/exercise4_pig/NYSE_dividends_A.csv' using PigStorage(',') AS (exchange:chararray, symbol:chararray, date:chararray, dividend:float);
+```
 * Join two relations `STOCK_A` and `DIV_A`:
-
+```
        JOINED_REL = JOIN STOCK_A BY (symbol, date), DIV_A BY (symbol, date);
+```
 * Check the schema of joined relation:
-
+```
        DESCRIBE JOINED_REL;
+```
 * Check the content stored in `JOINED_REL`.
-
+```
        DUMP JOINED_REL;
+```       
 * Sort the data with order by:
-
+```
        SORTED_DIV_A = ORDER DIV_A BY symbol, date asc; 
+```
 Check the content:
-
+```
        DUMP SORTED_DIV_A;
+```
 * The `GROUP` command allows you to group a relation by one of its fields. Enter the following commands, which groups the `DIV_A` relation by the dividend price for the "AZZ" stock.
 Filter first:
 
