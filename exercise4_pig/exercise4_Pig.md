@@ -28,10 +28,10 @@ Check the `STOCK_A`:
 
        DESCRIBE STOCK_A;`
 4. Create a subset of the data. 100 rows.
-
+```
        B = LIMIT STOCK_A 100;
        DESCRIBE B;
-
+```
 5. View the relation. Since `B` contains only 100 relations, we can simply dump its contents to standard out.
  
        DUMP B;
