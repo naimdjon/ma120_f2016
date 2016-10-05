@@ -71,8 +71,9 @@ Drop your database (unless you thought to keep it for further exploration later)
 
 
 [1]: CLosing=37.50, volume=167200, the query is: `select close, volume from daily_prices where symbol='ABC' and d_date='1996-04-25';`
-[2]: The answer is 2005-09-07, 0.077.
-Query: we need to obtain the results in decending order:
+
+[2]: The answer is `2005-09-07`, `0.077`.
+Query: we need to obtain the results in descending order:
 ```
 select symbol, d_date, dividend from dividends where symbol='AYN' order by dividend desc, d_date desc limit 1;
 ```
