@@ -3,7 +3,7 @@
 In this exercise, you will write a MapReduce job that will an XML file.
 The task is to read the `students.xml` with the map receiving av `VALUEIN` the student XML payload. 
 
-You can use _hadoop-custom-reader.zip_ as a template.
+You can use _hadoop-xml-reader.zip_ as a template.
 
 Remember that the Hadoop's default input format (`TextInputFormat`) will not work because in XML we define logical structures that can span multiple lines. 
 
