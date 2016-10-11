@@ -64,7 +64,8 @@ public class XmlRecordReader extends RecordReader<LongWritable, Text> {
                 try {
                     buffer.write(tagName);
                     if (readUntilMatch(tagNameEnd, true)) {
-                        //TODO
+                        currentKey = new LongWritable(inputStream.getPos());
+                        currentValue = new Text(buffer.getData());
                         return true;
                     }
                 } finally {
