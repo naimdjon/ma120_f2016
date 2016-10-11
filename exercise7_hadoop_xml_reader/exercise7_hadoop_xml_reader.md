@@ -18,6 +18,7 @@ All the things you have to do is marked with `//TODO` in the template project. Y
 ## Tasks
 1. Find out how many students there are
 2. Calculate average scores per subject.
+    - output should be `&lt;subjectId&gt;  &lt;average_score&gt;`
 3. Find the student with the highest average score.
 
 NB! It is obvious that you are not allowed to use Linux tools to find answers.
