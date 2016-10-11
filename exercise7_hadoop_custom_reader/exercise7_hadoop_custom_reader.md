@@ -1,7 +1,7 @@
 ## Exercise 7. Hadoop custom reader.
 
 In this exercise, you will write a MapReduce job that will an XML file.
-The task is to read the `students.xml` with the map receiving av `VALUEIN` the student XML payload. [Download](https://raw.githubusercontent.com/naimdjon/ma120_f2016/master/exercise7_hadoop_custom_reader/students.xml) the dataset.
+The task is to read the `students.xml` with the map receiving av `VALUEIN` the student XML payload. [Download](https://raw.githubusercontent.com/naimdjon/ma120_f2016/master/exercise7_hadoop_custom_reader/students.xml) the dataset and copy it to HDFS.
 
 
 You can use _hadoop-xml-reader.zip_ as a template.
