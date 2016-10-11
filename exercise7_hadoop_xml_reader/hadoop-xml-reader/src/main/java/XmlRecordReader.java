@@ -53,8 +53,8 @@ public class XmlRecordReader extends RecordReader<LongWritable, Text> {
 
     @Override
     public float getProgress() throws IOException, InterruptedException {
-        //TODO
-        return 0.0f;
+        final long total = end - start;
+        return (inputStream.getPos() - start) / total;
     }
 
     @Override
@@ -101,6 +101,6 @@ public class XmlRecordReader extends RecordReader<LongWritable, Text> {
 
     @Override
     public void close() throws IOException {
-        //TODO
+        inputStream.close();
     }
 }
