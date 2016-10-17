@@ -32,10 +32,10 @@ public class XmlRecordReader extends RecordReader<LongWritable, Text> {
 
     @Override
     public void initialize(InputSplit split, TaskAttemptContext context) throws IOException, InterruptedException {
-        FileSplit filesplit = (FileSplit) split;
+        final FileSplit filesplit = (FileSplit) split;
         start = filesplit.getStart();
         end = start + filesplit.getLength();
-        FileSystem fs = filesplit.getPath().getFileSystem(context.getConfiguration());
+        final FileSystem fs = filesplit.getPath().getFileSystem(context.getConfiguration());
         inputStream = fs.open(filesplit.getPath());
         inputStream.seek(start);
     }
@@ -65,7 +65,8 @@ public class XmlRecordReader extends RecordReader<LongWritable, Text> {
                     buffer.write(tagName);
                     if (readUntilMatch(tagNameEnd, true)) {
                         currentKey = new LongWritable(inputStream.getPos());
-                        currentValue = new Text(buffer.getData());
+                        currentValue = new Text();
+                        currentValue.set(buffer.getData(), 0, buffer.getLength());
                         return true;
                     }
                 } finally {
